@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-based AR Application</title>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.6/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+        <!-- AR Marker -->
+        <a-marker preset="hiro">
+            <!-- Environmental Data (Bars) -->
+            <a-entity position="0 0.5 0">
+
+                                <!-- Bars (Sample Data) -->
+                                <a-entity position="-0.4 0.5 0" scale="0.2 1 1">
+                                    <!-- Bar 1 -->
+                                    <a-box height="0.6" depth="0.1" color="red" position="-1 0.3 0"></a-box> 
+                                    <!-- Bar 2 -->
+                                    <a-box height="0.8" depth="0.1" color="blue" position="0 0.4 0"></a-box>
+                                    <!-- Bar 3 -->
+                                    <a-box height="0.7" depth="0.1" color="green" position="1 0.35 0"></a-box>
+                                    <!-- Bar 4 -->
+                                    <a-box height="0.5" depth="0.1" color="yellow" position="2 0.25 0"></a-box>
+                                    <!-- Bar 5 -->
+                                    <a-box height="0.9" depth="0.1" color="purple" position="3 0.45 0"></a-box>
+                                </a-entity>
+                                <!-- Labels -->
+
+            </a-entity>
+
+            <!-- Decorative Elements -->
+            <!-- Floor -->
+            <a-plane rotation="-90 0 0" width="20" height="20" color="#000000"></a-plane>
+            <!-- Ambient Light -->
+            <a-light type="ambient" color="#FFF"></a-light>
+        </a-marker>
+
+        <!-- Camera -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
